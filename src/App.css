@@ -41,17 +41,24 @@
 }
 
 .ForEachDiv {
-  background-color: aqua;
+  background-color: rgb(60, 60, 60);
   padding: 4rem 4rem;
   display: flex;
   gap: 5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .ForEachDiv div {
-  background-color: pink;
-  min-width: 10rem;
-  min-height: 15rem;
+  background-color: rgb(255, 255, 255);
+  max-width: 10rem;
+  max-height: 15rem;
+  overflow: hidden;
+}
+
+.ForEachDiv div p {
+  overflow: hidden;
+  height: 1.5rem;
 }
 
 .ForEachDiv div img {
