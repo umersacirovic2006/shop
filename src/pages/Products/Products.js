@@ -6,11 +6,19 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 function Products() {
 	const [data, setData] = useState([])
 	const [searchQuery, setSearchQuery] = useState('')
+	const [loading, setLoading] = useState(false)
+
+	const hstyle = {
+		textAlign: "center",
+		marginTop: '100px'
+	}
 
 	const fetchApi = async () => {
 		try {
+			setLoading(true)
 			const response = await axios.get("https://fakestoreapi.com/products")
 			setData(response.data)
+			setLoading(false)
 		} catch (error) {
 			console.log("Error: ", error)
 		} finally {
@@ -28,19 +36,21 @@ function Products() {
 
 	const filteredProducts = data.filter((product) =>
 		product.title.toLowerCase().includes(searchQuery.toLowerCase())
-)
+	)
 
 	return (
-		<div className='Products'>
-			<SearchBar onData={handleSearch} />
-			<div className='ForEachDiv'>
-				{filteredProducts.map((data) => (
-					<div key={data.id}>
-						<img src={data.image} alt={data.title} />
-						<p>{data.title}</p>
-						<p>{data.price}</p>
-					</div>))}
-			</div>
+		<div>
+			{loading ? <h1 style={hstyle}>Loading...</h1> : <div className='Products'>
+				<SearchBar onData={handleSearch} />
+				<div className='ForEachDiv'>
+					{filteredProducts.map((data) => (
+						<div key={data.id}>
+							<img src={data.image} alt={data.title} />
+							<p>{data.title}</p>
+							<p>{data.price}</p>
+						</div>))}
+				</div>
+			</div>}
 		</div>
 	)
 }
