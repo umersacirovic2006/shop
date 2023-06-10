@@ -2,65 +2,79 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
 
-.Nav {
-  background-color: #e7c866;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
+  .Nav {
+    background-color: #e7c866;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 
-.Nav .links {
-  display: flex;
-  height: inherit;
-  align-items: center;
-  gap: 2rem ;
-}
+  .Nav .links {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    gap: 2rem;
+  }
 
-.Home {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  .Home {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.Products {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
-  justify-content: space-around;
-  padding: 5rem 10rem;
-}
+  .Products {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    justify-content: space-around;
+    padding: 5rem 10rem;
+  }
 
-.Women, .Men, .Jewelry, .Electronics {
-  width: 100%;
-  min-height: 90vh;
-  max-height: 100%;
-}
+  .Women,
+  .Men,
+  .Jewelry,
+  .Electronics {
+    width: 100%;
+    min-height: 90vh;
+    max-height: 100%;
+  }
 
-.ForEachDiv {
-  background-color: rgb(60, 60, 60);
-  padding: 4rem 4rem;
-  display: flex;
-  gap: 5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .ForEachDiv {
+    background-color: rgb(60, 60, 60);
+    padding: 4rem 4rem;
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.ForEachDiv div {
-  background-color: rgb(255, 255, 255);
-  max-width: 10rem;
-  max-height: 15rem;
-  overflow: hidden;
-}
+  .ForEachDiv div {
+    background-color: rgb(255, 255, 255);
+    max-width: 10rem;
+    max-height: 15rem;
+    overflow: hidden;
+  }
 
-.ForEachDiv div p {
-  overflow: hidden;
-  height: 1.5rem;
-}
+  .ForEachDiv div p {
+    overflow: hidden;
+    height: 1.5rem;
+  }
 
-.ForEachDiv div img {
-  width: 5rem;
+  .ForEachDiv div img {
+    width: 5rem;
+  }
+
+  .SearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .SearchBar input {
+    padding: 1%;
+    border-radius: 100px;
+  }
 }
