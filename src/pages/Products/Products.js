@@ -1,9 +1,11 @@
-import React, {  } from 'react'
+import React, { } from 'react'
 import ReactQuery from '../../query'
 
 function Products() {
-	 return (
-		<ReactQuery />
+	return (
+		<div className='Products'>
+			<ReactQuery />
+		</div>
 	)
 }
 
